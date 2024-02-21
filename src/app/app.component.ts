@@ -1,30 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './components/shared/header.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-blog-root',
   standalone: true,
-  imports: [RouterOutlet],
   template: `
-    <nav>
-      <a href="/">Home</a>
-    </nav>
+    <blog-header />
     <router-outlet></router-outlet>
   `,
-  styles: [
-    `
-      :host {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 2rem;
-        text-align: center;
-      }
-
-      nav {
-        text-align: left;
-        padding: 0 0 2rem 0;
-      }
-    `,
-  ],
+  imports: [RouterOutlet, HeaderComponent],
+  host: {'some-binding': 'some-value'},
 })
 export class AppComponent {}
