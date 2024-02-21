@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
-      ssr: false,
+      ssr: true,
       static: true,
       prerender: {
         routes: [
@@ -25,6 +25,7 @@ export default defineConfig(({ mode }) => ({
           '/wordpress/capesante-aspretto-di-zafferano',
           '/products/',
           '/api/v1/products',
+          '/api/v1/posts?limit=3&page=1'
         ],
       },
     }),
