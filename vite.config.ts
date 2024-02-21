@@ -14,8 +14,18 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
+      ssr: false,
+      static: true,
       prerender: {
-        routes: ['/blog', '/blog/2022-12-27-my-first-post'],
+        routes: [
+          '/blog', 
+          '/blog/2022-12-27-my-first-post',
+          '/blog/2022-12-27-my-second-post',
+          '/blog/2024-02-22-my-third-post',
+          '/wordpress/capesante-aspretto-di-zafferano',
+          '/products/',
+          '/api/v1/products',
+        ],
       },
     }),
   ],
