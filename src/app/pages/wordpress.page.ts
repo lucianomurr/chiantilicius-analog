@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `
     <h2 class="font-bold text-center text-6xl text-slate-700 font-display">
-        CXCIBO Wordpress Page
+        Wordpress Page
     </h2>
 
     <router-outlet></router-outlet>
