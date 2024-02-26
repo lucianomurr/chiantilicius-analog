@@ -35,10 +35,10 @@ import { HttpClient } from '@angular/common/http';
   `,
 })
 export default class ProductsListComponent {
-  public data: Signal<Product[] | undefined> = this.getProducts();
+  public data: Signal<Product[]> = this.getProducts();
 
-  getProducts(): Signal<Product[] | undefined> {
+  getProducts(): Signal<Product[]> {
     const _http = inject(HttpClient);
-    return toSignal(_http.get<Product[]>('/api/v1/products'));
+    return toSignal(_http.get<Product[]>('/api/v1/products'), {initialValue: []} );
   }
 }

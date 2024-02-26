@@ -30,5 +30,7 @@ import { PostListItemComponent } from '../../components/home/post-list-item.comp
   imports: [RouterLink, HeroComponent, PostListItemComponent],
 })
 export default class HomeComponent {
+
   readonly posts = injectContentFiles<PostAttributes>();
+  
 }

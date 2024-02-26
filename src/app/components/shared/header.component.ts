@@ -6,79 +6,127 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [NgOptimizedImage],
   template: `
-    <nav
-      class=" bg-white w-full flex relative justify-between items-center mx-auto mt-8 px-8 h-20"
-    >
-      <!-- logo -->
-      <div class="inline-flex">
-        <a class="_o6689fn" href="/">
-            <img src="logo/cibo-logo.svg" width="200" height="80" priority>
-        </a>
+    <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
+      <a class="text-3xl font-bold leading-none" href="#">
+        <img src="./logo/cibo-logo.svg" width="200" priority>
+      </a>
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-blue-600 p-3">
+          <svg
+            class="block h-4 w-4 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
       </div>
-
-      <!-- end logo -->
-
-      <!-- search bar -->
-      <div class="hidden sm:block flex-shrink flex-grow-0 justify-start px-2">
-        <div class="inline-block">
-          <div class="inline-flex items-center max-w-full">
-            <button
-              class="flex items-center flex-grow-0 flex-shrink pl-2 relative w-60 border rounded-full px-1  py-1"
-              type="button"
-            >
-              <div class="block flex-grow flex-shrink overflow-hidden">
-                Start your search
-              </div>
-              <div
-                class="flex items-center justify-center relative  h-8 w-8 rounded-full"
-              >
-                <svg
-                  viewBox="0 0 32 32"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  role="presentation"
-                  focusable="false"
-                  style="
-                                display: block;
-                                fill: none;
-                                height: 12px;
-                                width: 12px;
-                                stroke: currentcolor;
-                                stroke-width: 5.33333;
-                                overflow: visible;
-                            "
-                >
-                  <g fill="none">
-                    <path
-                      d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- end search bar -->
+      <ul
+        class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6"
+      >
+        <li>
+          <a class="text-sm text-gray-400 hover:text-gray-500" href="#">Home</a>
+        </li>
+        <li class="text-gray-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </li>
+        <li>
+          <a class="text-sm text-blue-600 font-bold" href="#">About Us</a>
+        </li>
+        <li class="text-gray-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </li>
+        <li>
+          <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
+            >Services</a
+          >
+        </li>
+        <li class="text-gray-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </li>
+        <li>
+          <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
+            >Pricing</a
+          >
+        </li>
+        <li class="text-gray-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </li>
+        <li>
+          <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <a
+        class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
+        href="#"
+        >Sign In</a
+      >
+      <a
+        class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+        href="#"
+        >Sign up</a
+      >
     </nav>
     <!--Nav-->
     <!-- <nav id="header" class="w-full z-30 top-0 py-1">
       <div
         class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3"
       >
-        <label for="menu-toggle" class="cursor-pointer md:hidden block">
-          <svg
-            class="fill-current text-gray-900"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-          >
-            <title>menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-          </svg>
-        </label>
-        <input class="hidden" type="checkbox" id="menu-toggle" />
 
         <div
           class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1"
@@ -113,7 +161,7 @@ import { Component } from '@angular/core';
             class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
             href="#"
           >
-            <img ngSrc="./logo/chiantilicius.svg" width="400" height="116" priority>
+            <img src="./logo/cibo-logo.svg" width="400" priority>
           </a>
         </div>
 
